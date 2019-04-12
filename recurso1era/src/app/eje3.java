@@ -26,7 +26,7 @@ public class eje3 {
         System.out.println("teclee el valor que desea buscar");
         b=new java.util.Scanner(System.in).nextDouble();
         buscariterativo(arreglo, b, t, cont);
-        buscariterativo(arreglo, b, t, cont);
+        buscarRecursivo(arreglo, t, b);
         
     }
     
