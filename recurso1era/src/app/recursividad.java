@@ -40,12 +40,14 @@ public class recursividad  <T extends Comparable<T>>{
     } 
     
     public static <T> void imprimir (T []array,int length){    
-        if (length !=array.length){
-             System.out.print("a["+length+"]="+array[length]);
-             
-             imprimir(array,length+1);
-        }  System.out.println("");
-    } 
+        if(length==array.length){
+            System.out.println("");
+        }else{
+            System.out.print("a["+length+"]="+array[length]); 
+            imprimir(array, length+1);
+        }
+       
+    }
       public static <T > void inverso(T []array,int length){
         
         if (length >=0){
@@ -73,5 +75,20 @@ public class recursividad  <T extends Comparable<T>>{
             rangoDesde(rango, Desde+1);
         }
       }
+    public static <T>  void sumarhasta(int rango, int Desde, int suma){
+        int []arreglo = new int[rango+1];
+          if(Desde==rango+1){    
+              System.out.println("=> "+suma);
+        }
+        else{
+            arreglo[Desde]=Desde;
+              System.out.print(arreglo[Desde]+" + ");
+            suma+=arreglo[Desde];
+            
+            sumarhasta(rango, Desde+1,suma);
+        }
+      
+      }
+    
       
 }
