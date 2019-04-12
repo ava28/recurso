@@ -41,7 +41,7 @@ public class Main {
         System.out.println("-------------------------");
         r.rangoHasta(5,0);
         r.rangoDesde(10,5);
-        
+        r.sumarhasta(5, 0, 0);
     }
     
 }
